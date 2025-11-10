@@ -37,7 +37,19 @@
 
   "report:open:prod:pom": "npx allure open reports/allure-results/prod-report/pom",
   "report:open:prod:codegen": "npx allure open reports/allure-results/prod-report/codegen",
-  "report:open:prod:combined": "npx allure open reports/allure-results/prod-report/combined"
+  "report:open:prod:combined": "npx allure open reports/allure-results/prod-report/combined",
+
+  "test:dev:bdd": "npm run clean:reports && cross-env PLAYWRIGHT_PROJECT=DEV-BDD npx cucumber-js --config bdd.config.js && npx allure generate reports/allure-results/dev/bdd --clean -o reports/allure-results/dev-report/bdd",
+  "report:open:dev:bdd": "npx allure open reports/allure-results/dev-report/bdd",
+
+  "test:qa:bdd": "npm run clean:reports && cross-env PLAYWRIGHT_PROJECT=QA-BDD npx cucumber-js --config bdd.config.js && npx allure generate reports/allure-results/qa/bdd --clean -o reports/allure-results/qa-report/bdd",
+  "report:open:qa:bdd": "npx allure open reports/allure-results/qa-report/bdd",
+
+  "test:stage:bdd": "npm run clean:reports && cross-env PLAYWRIGHT_PROJECT=STAGE-BDD npx cucumber-js --config bdd.config.js && npx allure generate reports/allure-results/stage/bdd --clean -o reports/allure-results/stage-report/bdd",
+  "report:open:stage:bdd": "npx allure open reports/allure-results/stage-report/bdd",
+
+  "test:prod:bdd": "npm run clean:reports && cross-env PLAYWRIGHT_PROJECT=PROD-BDD npx cucumber-js --config bdd.config.js && npx allure generate reports/allure-results/prod/bdd --clean -o reports/allure-results/prod-report/bdd",
+  "report:open:prod:bdd": "npx allure open reports/allure-results/prod-report/bdd"
 
 },
     "author": "",
