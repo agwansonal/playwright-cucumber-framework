@@ -1,0 +1,18 @@
+# Node and environment files
+node_modules/
+
+# Keep reports folder for versioned output
+!reports/
+
+# Tests folder - include everything
+!tests/
+!tests/**
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor settings
+.vscode/
+.idea/
+*.swp
