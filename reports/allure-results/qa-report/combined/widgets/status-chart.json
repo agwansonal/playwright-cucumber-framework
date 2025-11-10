@@ -1,1 +1,0 @@
-[{"uid":"ae7c076b8ba16711","name":"Invalid login with wrong credentials","time":{"start":1762790810478,"stop":1762790813082,"duration":2604},"status":"passed","severity":"normal"},{"uid":"610362cd1cb6ac71","name":"Successful login with valid credentials","time":{"start":1762790806292,"stop":1762790810476,"duration":4184},"status":"passed","severity":"normal"}]
