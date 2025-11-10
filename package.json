@@ -1,0 +1,53 @@
+{
+    "name": "playwright-cucumber-framework",
+    "version": "1.0.0",
+    "description": "Multi-environment Playwright test framework with Allure reporting",
+    "main": "index.js",
+    "scripts": {
+  "clean:reports": "npx rimraf reports allure-results allure-report",
+  "test:dev:pom": "npm run clean:reports && cross-env PLAYWRIGHT_PROJECT=DEV-POM npx playwright test && npx allure generate reports/allure-results/dev/pom --clean -o reports/allure-results/dev-report/pom",
+  "test:dev:codegen": "npm run clean:reports && cross-env PLAYWRIGHT_PROJECT=DEV-CODEGEN npx playwright test && npx allure generate reports/allure-results/dev/codegen --clean -o reports/allure-results/dev-report/codegen",
+  "test:dev:combined": "npm run clean:reports && cross-env PLAYWRIGHT_PROJECT=DEV-COMBINED npx playwright test && npx allure generate reports/allure-results/dev/combined --clean -o reports/allure-results/dev-report/combined",
+
+  "report:open:dev:pom": "npx allure open reports/allure-results/dev-report/pom",
+  "report:open:dev:codegen": "npx allure open reports/allure-results/dev-report/codegen",
+  "report:open:dev:combined": "npx allure open reports/allure-results/dev-report/combined",
+
+  "test:qa:pom": "npm run clean:reports && cross-env PLAYWRIGHT_PROJECT=QA-POM npx playwright test && npx allure generate reports/allure-results/qa/pom --clean -o reports/allure-results/qa-report/pom",
+  "test:qa:codegen": "npm run clean:reports && cross-env PLAYWRIGHT_PROJECT=QA-CODEGEN npx playwright test && npx allure generate reports/allure-results/qa/codegen --clean -o reports/allure-results/qa-report/codegen",
+  "test:qa:combined": "npm run clean:reports && cross-env PLAYWRIGHT_PROJECT=QA-COMBINED npx playwright test && npx allure generate reports/allure-results/qa/combined --clean -o reports/allure-results/qa-report/combined",
+
+  "report:open:qa:pom": "npx allure open reports/allure-results/qa-report/pom",
+  "report:open:qa:codegen": "npx allure open reports/allure-results/qa-report/codegen",
+  "report:open:qa:combined": "npx allure open reports/allure-results/qa-report/combined",
+
+ 
+  "test:stage:pom": "npm run clean:reports && cross-env PLAYWRIGHT_PROJECT=STAGE-POM npx playwright test && npx allure generate reports/allure-results/stage/pom --clean -o reports/allure-results/stage-report/pom",
+  "test:stage:codegen": "npm run clean:reports && cross-env PLAYWRIGHT_PROJECT=STAGE-CODEGEN npx playwright test && npx allure generate reports/allure-results/stage/codegen --clean -o reports/allure-results/stage-report/codegen",
+  "test:stage:combined": "npm run clean:reports && cross-env PLAYWRIGHT_PROJECT=STAGE-COMBINED npx playwright test && npx allure generate reports/allure-results/stage/combined --clean -o reports/allure-results/stage-report/combined",
+
+  "report:open:stage:pom": "npx allure open reports/allure-results/stage-report/pom",
+  "report:open:stage:codegen": "npx allure open reports/allure-results/stage-report/codegen",
+  "report:open:stage:combined": "npx allure open reports/allure-results/stage-report/combined",
+
+  
+  "test:prod:pom": "npm run clean:reports && cross-env PLAYWRIGHT_PROJECT=PROD-POM npx playwright test && npx allure generate reports/allure-results/prod/pom --clean -o reports/allure-results/prod-report/pom",
+  "test:prod:codegen": "npm run clean:reports && cross-env PLAYWRIGHT_PROJECT=PROD-CODEGEN npx playwright test && npx allure generate reports/allure-results/prod/codegen --clean -o reports/allure-results/prod-report/codegen",
+  "test:prod:combined": "npm run clean:reports && cross-env PLAYWRIGHT_PROJECT=PROD-COMBINED npx playwright test && npx allure generate reports/allure-results/prod/combined --clean -o reports/allure-results/prod-report/combined",
+
+  "report:open:prod:pom": "npx allure open reports/allure-results/prod-report/pom",
+  "report:open:prod:codegen": "npx allure open reports/allure-results/prod-report/codegen",
+  "report:open:prod:combined": "npx allure open reports/allure-results/prod-report/combined"
+
+},
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "@playwright/test": "^1.48.2",
+        "allure-playwright": "^2.15.1",
+        "cross-env": "^7.0.3",
+        "dotenv": "^16.3.2",
+        "fs-extra": "^11.2.0",
+        "jsonlint": "^1.6.3"
+    }
+}
